@@ -76,7 +76,7 @@ makemaze(int ystart)
 	static Mnode	dummy;
 	Point		p;
 	Orient		orient;
-	u64int	 	max, tmpmax;
+	u64int	 	max;
 	int		move;
 
 	max = 0;
@@ -88,7 +88,7 @@ makemaze(int ystart)
 	while(cur->back != nil){
 		if(cur->tried == ALL)
 			cur = backup(cur);
-		switch (nrand(3)) {
+		switch(nrand(3)){
 		case 0:
 			move = F;
 			break;
@@ -112,9 +112,8 @@ makemaze(int ystart)
 			continue;
 		cur->open |= move;
 		cur = newmnode(cur, orient);
-		tmpmax = ++pathlen;
-		if(tmpmax > max){
-			max = tmpmax;
+		if(++pathlen > max){
+			max = pathlen;
 			far = cur;
 		}
 	}
