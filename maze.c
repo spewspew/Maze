@@ -230,7 +230,7 @@ void		drawside(Point, Orient, Memimage *);
 void		mazeline(Point, Point, Point, Memimage *);
 
 Memimage*	black, *red, *canvas;
-Point		shift = { .x 5, .y 5 };
+Point		shift = { 5,  5 };
 #define D	20
 
 void
