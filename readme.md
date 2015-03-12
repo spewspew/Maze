@@ -6,6 +6,6 @@ exercise:
 
 * Write a program that randomly generates a solvable maze.
 
-This was written for Plan 9 and its C libraries. It should be very easy to port to Unix. This is the 
+This was written for Plan 9 and its C libraries and compiles on Unix with Plan9port. This is the 
 [recursive backtracker](http://en.wikipedia.org/wiki/Maze_generation_algorithm#Recursive_backtracker)
 algorithm though I found that out after I finished writing it.
